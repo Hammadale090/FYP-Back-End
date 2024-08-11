@@ -1,0 +1,148 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professional_profiles",
+  "info": {
+    "singularName": "professional-profile",
+    "pluralName": "professional-profiles",
+    "displayName": "ProfessionalProfile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client-profile.client-profile",
+      "inversedBy": "professional_profile"
+    },
+    "Banner_photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "Experience": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "professional_photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "url_link": {
+      "type": "string"
+    },
+    "profile_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "brand_color": {
+      "type": "string"
+    },
+    "Custom_cta_button": {
+      "type": "string"
+    },
+    "agency": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agency.agency",
+      "mappedBy": "professional_profile"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "professional_profile"
+    },
+    "testimonials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::testimonial.testimonial",
+      "mappedBy": "professional_profile"
+    },
+    "listings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::listing.listing",
+      "mappedBy": "professional_profile"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "professional_profile"
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portfolio.portfolio",
+      "mappedBy": "professional_profile"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "professional_profile"
+    },
+    "certifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::certification.certification",
+      "mappedBy": "professional_profile"
+    },
+    "social_links": {
+      "type": "json"
+    },
+    "professional_preference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::professional-preference.professional-preference",
+      "mappedBy": "professional_profile"
+    },
+    "invited": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::listing.listing",
+      "mappedBy": "invites"
+    },
+    "promo_code": {
+      "type": "string"
+    },
+    "promo_text": {
+      "type": "string"
+    }
+  }
+}

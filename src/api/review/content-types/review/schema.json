@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "review",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "title": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "enumeration",
+      "enum": [
+        "Star 1 - Poor",
+        "Star 2 - Fair",
+        "Star 3  - Average",
+        "Star 4 - Good",
+        "Star 5 - Excellent"
+      ]
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "review": {
+      "type": "text"
+    },
+    "professional": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "client_profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client-profile.client-profile",
+      "inversedBy": "reviews"
+    }
+  }
+}

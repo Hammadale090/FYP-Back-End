@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "certifications",
+  "info": {
+    "singularName": "certification",
+    "pluralName": "certifications",
+    "displayName": "Certification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client-profile.client-profile",
+      "inversedBy": "certifications"
+    },
+    "professional_profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::professional-profile.professional-profile",
+      "inversedBy": "certifications"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Award",
+        "Certification"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "issued_by": {
+      "type": "string"
+    },
+    "issue_date": {
+      "type": "date"
+    }
+  }
+}

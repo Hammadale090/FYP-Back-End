@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_additional_information_additional_informations",
+  "info": {
+    "displayName": "additional_information"
+  },
+  "options": {},
+  "attributes": {
+    "deposit": {
+      "type": "string"
+    },
+    "lastRemodelYear": {
+      "type": "string"
+    },
+    "equipment": {
+      "type": "string"
+    },
+    "poolSize": {
+      "type": "string"
+    },
+    "amenties": {
+      "type": "string"
+    },
+    "additionalRooms": {
+      "type": "string"
+    }
+  }
+}

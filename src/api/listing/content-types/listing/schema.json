@@ -1,0 +1,162 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listings",
+  "info": {
+    "singularName": "listing",
+    "pluralName": "listings",
+    "displayName": "Listing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "predictedPrice": {
+      "type": "string"
+    },
+    "safetyRatings": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "coverPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "Gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "overview": {
+      "displayName": "overview",
+      "type": "component",
+      "repeatable": false,
+      "component": "overview.overview"
+    },
+    "description": {
+      "type": "text"
+    },
+    "additional_information": {
+      "displayName": "additional_information",
+      "type": "component",
+      "repeatable": false,
+      "component": "additional-information.additional-information"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "area": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "energy_efficiency_metrics": {
+      "displayName": "energy_efficiency_metrics",
+      "type": "component",
+      "repeatable": false,
+      "component": "energy-efficiency-metrics.energy-efficiency-metrics"
+    },
+    "interactiveFloorPlans": {
+      "displayName": "interactiveFloorPlans",
+      "type": "component",
+      "repeatable": false,
+      "component": "interactive-floor-plans.interactive-floor-plans"
+    },
+    "user_generated_showcase": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "furnitureSugesstions": {
+      "displayName": "furnitureSugesstions",
+      "type": "component",
+      "repeatable": false,
+      "component": "furniture-sugesstions.furniture-sugesstions"
+    },
+    "features": {
+      "type": "json"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "views": {
+      "type": "json"
+    },
+    "favourites": {
+      "type": "json"
+    },
+    "professional_profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::professional-profile.professional-profile",
+      "inversedBy": "listings"
+    },
+    "client_profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client-profile.client-profile",
+      "inversedBy": "listings"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event",
+      "mappedBy": "listing"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["active", "sold"]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "invites": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::professional-profile.professional-profile",
+      "inversedBy": "invited"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "galleryWithUrls": {
+      "type": "json"
+    },
+    "coverPhotoFromUrl": {
+      "type": "text"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

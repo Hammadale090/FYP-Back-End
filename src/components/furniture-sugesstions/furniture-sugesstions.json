@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_furniture_sugesstions_furniture_sugesstions",
+  "info": {
+    "displayName": "furnitureSugesstions"
+  },
+  "options": {},
+  "attributes": {
+    "videoUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agencies",
+  "info": {
+    "singularName": "agency",
+    "pluralName": "agencies",
+    "displayName": "Agency"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client-profile.client-profile",
+      "inversedBy": "agency"
+    },
+    "professional_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::professional-profile.professional-profile",
+      "inversedBy": "agency"
+    },
+    "Agency_name": {
+      "type": "string"
+    },
+    "Agency_bio": {
+      "type": "text"
+    },
+    "Expertise": {
+      "type": "string"
+    },
+    "Tax_number": {
+      "type": "string"
+    },
+    "Service_area": {
+      "type": "string"
+    }
+  }
+}

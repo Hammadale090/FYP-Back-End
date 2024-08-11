@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "request_visits",
+  "info": {
+    "singularName": "request-visit",
+    "pluralName": "request-visits",
+    "displayName": "RequestVisit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "time"
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}

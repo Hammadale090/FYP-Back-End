@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preferences",
+  "info": {
+    "singularName": "preference",
+    "pluralName": "preferences",
+    "displayName": "preference",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client-profile.client-profile",
+      "inversedBy": "preference"
+    },
+    "homeWarranty": {
+      "type": "enumeration",
+      "enum": [
+        "All Warranties",
+        "Home Warranty Available",
+        "Home Warranty Unavailable"
+      ]
+    },
+    "filterByFurnished": {
+      "type": "enumeration",
+      "enum": [
+        "Furnished Properties",
+        "Unfurnished Properties"
+      ]
+    },
+    "propertyAmenities": {
+      "type": "json"
+    },
+    "architecturalStyles": {
+      "type": "json"
+    },
+    "virtualTours": {
+      "type": "enumeration",
+      "enum": [
+        "Virtual Tours Only",
+        "All Listings"
+      ]
+    },
+    "propertyType": {
+      "type": "enumeration",
+      "enum": [
+        "For Sale",
+        "For Rent",
+        "New Construction",
+        "Recently Sold"
+      ]
+    },
+    "closeProximities": {
+      "type": "json"
+    },
+    "homeTypes": {
+      "type": "json"
+    },
+    "min_priceRange": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "max_priceRange": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "min_constructionDateRange": {
+      "type": "date"
+    },
+    "max_constructionDateRange": {
+      "type": "date"
+    },
+    "min_sizeConsiderationsRange": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "max_sizeConsiderationsRange": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "propertyCategory": {
+      "type": "enumeration",
+      "enum": [
+        "House",
+        "Apartment",
+        "Condo",
+        "Townhouse",
+        "Land",
+        "Commercial"
+      ]
+    },
+    "location": {
+      "type": "json"
+    },
+    "specific_keywords_or_phrases": {
+      "type": "json",
+      "default": []
+    }
+  }
+}

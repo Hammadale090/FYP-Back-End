@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_interactive_floor_plans_interactive_floor_plans",
+  "info": {
+    "displayName": "interactiveFloorPlans"
+  },
+  "options": {},
+  "attributes": {
+    "videoUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

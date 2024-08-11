@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_energy_efficiency_metrics_energy_efficiency_metrics",
+  "info": {
+    "displayName": "energy_efficiency_metrics"
+  },
+  "options": {},
+  "attributes": {
+    "energy_consumption": {
+      "type": "string"
+    },
+    "solar_panel_output": {
+      "type": "string"
+    },
+    "environmental_impact": {
+      "type": "string"
+    }
+  }
+}

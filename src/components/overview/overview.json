@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_overview_overviews",
+  "info": {
+    "displayName": "overview",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "garages": {
+      "type": "string"
+    },
+    "size": {
+      "type": "biginteger"
+    },
+    "landSize": {
+      "type": "biginteger"
+    },
+    "yearBuild": {
+      "type": "integer"
+    },
+    "buildingId": {
+      "type": "string"
+    },
+    "homeStatus": {
+      "type": "string"
+    }
+  }
+}

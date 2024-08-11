@@ -1,0 +1,225 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professional_preferences",
+  "info": {
+    "singularName": "professional-preference",
+    "pluralName": "professional-preferences",
+    "displayName": "professional_preference",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "propertySpecialization": {
+      "type": "json",
+      "default": {
+        "residential": false,
+        "commercial": false,
+        "luxury": false,
+        "mixedUse": false
+      }
+    },
+    "preferredPropertyTypes": {
+      "type": "json",
+      "default": {
+        "singleFamilyHomes": false,
+        "condos": false,
+        "officeSpaces": false,
+        "retailSpaces": false,
+        "industrialProperties": false
+      }
+    },
+    "min_priceRange": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "max_priceRange": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "geographicAreas": {
+      "type": "json",
+      "default": {
+        "cityCenter": false,
+        "suburbs": false,
+        "ruralAreas": false,
+        "specificNeighborhoods": false
+      }
+    },
+    "excellingRegions": {
+      "type": "json"
+    },
+    "min_idealClientDemographicsAge": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "max_idealClientDemographicsAge": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "min_idealClientDemographicsIncome": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "max_idealClientDemographicsIncome": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "idealClientDemographicsFamilyStatus": {
+      "type": "json",
+      "default": {
+        "single": false,
+        "married": false,
+        "divorced": false,
+        "inARelationship": false
+      }
+    },
+    "idealClientDemographicsOccupation": {
+      "type": "json",
+      "default": {
+        "healthcare": false,
+        "education": false,
+        "engineering": false,
+        "informationTechnology": false,
+        "finance": false,
+        "law": false,
+        "salesAndMarketing": false,
+        "construction": false,
+        "manufacturing": false,
+        "artsAndEntertainment": false,
+        "scienceAndResearch": false,
+        "publicServiceAndGovernment": false,
+        "transportationAndLogistics": false,
+        "hospitalityAndTourism": false,
+        "agriculture": false
+      }
+    },
+    "clientSpecialization": {
+      "type": "json",
+      "default": {
+        "firstTimeHomebuyers": false,
+        "retirees": false,
+        "investors": false,
+        "relocatingClients": false
+      }
+    },
+    "commonClientNeeds": {
+      "type": "json",
+      "default": {
+        "investmentProperties": false,
+        "relocation": false,
+        "downsizing": false,
+        "upgrading": false
+      }
+    },
+    "specificClientPreferences": {
+      "type": "json",
+      "default": {
+        "ecoFriendlyHomes": false,
+        "historicProperties": false,
+        "accessibleProperties": false,
+        "smartHomes": false
+      }
+    },
+    "communicationPreferences": {
+      "type": "json",
+      "default": {
+        "phoneCalls": false,
+        "emails": false,
+        "textMessages": false,
+        "inPersonMeetings": false,
+        "videoCalls": false
+      }
+    },
+    "communicationTools": {
+      "type": "json",
+      "default": {
+        "crmSoftware": false,
+        "emailMarketingPlatforms": false,
+        "virtualMeetingTools": false
+      }
+    },
+    "additionalServices": {
+      "type": "json",
+      "default": {
+        "staging": false,
+        "propertyManagement": false,
+        "investmentAnalysis": false,
+        "marketResearch": false
+      }
+    },
+    "valueAddedServices": {
+      "type": "json",
+      "default": {
+        "homeRenovationConsultation": false,
+        "legalAssistance": false,
+        "financialPlanningServices": false
+      }
+    },
+    "marketingStrategies": {
+      "type": "json",
+      "default": {
+        "onlineAdvertising": false,
+        "socialMediaMarketing": false,
+        "openHouses": false,
+        "printAdvertising": false
+      }
+    },
+    "successfulMarketingChannels": {
+      "type": "json",
+      "default": {
+        "facebookAds": false,
+        "instagramMarketing": false,
+        "localEventsSponsorship": false
+      }
+    },
+    "clientRelationshipManagement": {
+      "type": "json",
+      "default": {
+        "regularFollowUps": false,
+        "clientAppreciationEvents": false,
+        "referralPrograms": false
+      }
+    },
+    "postTransactionFollowUp": {
+      "type": "json",
+      "default": {
+        "quarterlyNewsletters": false,
+        "annualCheckIns": false,
+        "specialOccasionGreetings": false
+      }
+    },
+    "professionalExperience": {
+      "type": "json",
+      "default": []
+    },
+    "specializedCertifications": {
+      "type": "json",
+      "default": []
+    },
+    "goalsExpectations": {
+      "type": "json",
+      "default": {
+        "leadConversionRate": false,
+        "clientSatisfaction": false,
+        "transactionVolume": false
+      }
+    },
+    "measuringSuccess": {
+      "type": "json",
+      "default": {
+        "positiveReviewsTestimonials": false,
+        "repeatBusiness": false,
+        "referralRate": false
+      }
+    },
+    "professional_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::professional-profile.professional-profile",
+      "inversedBy": "professional_preference"
+    }
+  }
+}
