@@ -87,18 +87,6 @@
       "target": "api::event.event",
       "mappedBy": "client_profile"
     },
-    "testimonials": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::testimonial.testimonial",
-      "mappedBy": "client_profile"
-    },
-    "submitted_testimonials": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::testimonial.testimonial",
-      "mappedBy": "testimonial_user"
-    },
     "listings": {
       "type": "relation",
       "relation": "oneToMany",
@@ -161,6 +149,11 @@
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "client_profile"
+    },
+    "properties_viewed": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::listing.listing"
     }
   }
 }

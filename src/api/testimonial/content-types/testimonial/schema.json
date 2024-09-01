@@ -4,7 +4,8 @@
   "info": {
     "singularName": "testimonial",
     "pluralName": "testimonials",
-    "displayName": "Testimonial"
+    "displayName": "Testimonial",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,26 +15,18 @@
     "body": {
       "type": "text"
     },
-    "rating": {
+    "name": {
       "type": "string"
     },
-    "client_profile": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::client-profile.client-profile",
-      "inversedBy": "testimonials"
-    },
-    "professional_profile": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::professional-profile.professional-profile",
-      "inversedBy": "testimonials"
-    },
-    "testimonial_user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::client-profile.client-profile",
-      "inversedBy": "submitted_testimonials"
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -31,13 +31,23 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "Gallery": {
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "overview": {
       "displayName": "overview",
@@ -88,7 +98,12 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "furnitureSugesstions": {
       "displayName": "furnitureSugesstions",
@@ -128,7 +143,10 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["active", "sold"]
+      "enum": [
+        "active",
+        "sold"
+      ]
     },
     "isFeatured": {
       "type": "boolean",

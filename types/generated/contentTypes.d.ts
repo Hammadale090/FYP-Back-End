@@ -964,16 +964,6 @@ export interface ApiClientProfileClientProfile extends Schema.CollectionType {
       'oneToMany',
       'api::event.event'
     >;
-    testimonials: Attribute.Relation<
-      'api::client-profile.client-profile',
-      'oneToMany',
-      'api::testimonial.testimonial'
-    >;
-    submitted_testimonials: Attribute.Relation<
-      'api::client-profile.client-profile',
-      'oneToMany',
-      'api::testimonial.testimonial'
-    >;
     listings: Attribute.Relation<
       'api::client-profile.client-profile',
       'oneToMany',
@@ -1015,6 +1005,11 @@ export interface ApiClientProfileClientProfile extends Schema.CollectionType {
       'api::client-profile.client-profile',
       'oneToMany',
       'api::review.review'
+    >;
+    properties_viewed: Attribute.Relation<
+      'api::client-profile.client-profile',
+      'oneToMany',
+      'api::listing.listing'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1565,11 +1560,6 @@ export interface ApiProfessionalProfileProfessionalProfile
       'oneToMany',
       'api::event.event'
     >;
-    testimonials: Attribute.Relation<
-      'api::professional-profile.professional-profile',
-      'oneToMany',
-      'api::testimonial.testimonial'
-    >;
     listings: Attribute.Relation<
       'api::professional-profile.professional-profile',
       'oneToMany',
@@ -1832,28 +1822,15 @@ export interface ApiTestimonialTestimonial extends Schema.CollectionType {
     singularName: 'testimonial';
     pluralName: 'testimonials';
     displayName: 'Testimonial';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     body: Attribute.Text;
-    rating: Attribute.String;
-    client_profile: Attribute.Relation<
-      'api::testimonial.testimonial',
-      'manyToOne',
-      'api::client-profile.client-profile'
-    >;
-    professional_profile: Attribute.Relation<
-      'api::testimonial.testimonial',
-      'manyToOne',
-      'api::professional-profile.professional-profile'
-    >;
-    testimonial_user: Attribute.Relation<
-      'api::testimonial.testimonial',
-      'manyToOne',
-      'api::client-profile.client-profile'
-    >;
+    name: Attribute.String;
+    image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
