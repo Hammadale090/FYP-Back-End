@@ -87,12 +87,6 @@
       "target": "api::event.event",
       "mappedBy": "professional_profile"
     },
-    "testimonials": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::testimonial.testimonial",
-      "mappedBy": "professional_profile"
-    },
     "listings": {
       "type": "relation",
       "relation": "oneToMany",
